@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="cscl.appointment.booking.model.CsclAppointeeMaster">
+		<field name="id_" type="long" />
+		<field name="name" type="String" />
+		<field name="designation" type="String" />
+		<field name="isActive" type="Boolean" />
+	</model>
+	<model name="cscl.appointment.booking.model.CsclAppointmentMaster">
+		<field name="id_" type="long" />
+		<field name="name" type="String" />
+		<field name="email" type="String" />
+		<field name="mobile" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="address" type="String">
+			<hint name="display-width">350</hint>
+			<hint-collection name="TEXTAREA" />
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="appointee" type="int" />
+		<field name="preferedDate" type="Date">
+			<hint name="year-range-past">false</hint>
+			<hint name="year-range-future">true</hint>
+			<hint name="show-time">true</hint>
+		</field>
+		<field name="preferedTime" type="String" />
+		<field name="reason" type="String">
+			<hint name="display-width">350</hint>
+			<hint-collection name="TEXTAREA" />
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="refId" type="String" />
+		<field name="approver" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="appointedDate" type="Date">
+			<hint name="year-range-past">false</hint>
+			<hint name="year-range-future">true</hint>
+			<hint name="show-time">true</hint>
+		</field>
+		<field name="appointedTime" type="String" />
+		<field name="comment" type="String">
+			<hint name="display-width">350</hint>
+			<hint-collection name="TEXTAREA" />
+			<hint name="max-length">150</hint>
+		</field>
+	</model>
+	<model name="cscl.appointment.booking.model.CsclApproverMapping">
+		<field name="id_" type="long" />
+		<field name="appointee" type="int" />
+		<field name="approver" type="String" />
+		<field name="assignedTo" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="cscl.appointment.booking.model.CsclApproverMaster">
+		<field name="id_" type="long" />
+		<field name="name" type="String" />
+		<field name="appointee" type="String" />
+		<field name="userId" type="long" />
+		<field name="isActive" type="Boolean" />
+	</model>
+	<model name="cscl.appointment.booking.model.CsclStatus">
+		<field name="id_" type="long" />
+		<field name="name" type="String" />
+		<field name="value" type="String" />
+		<field name="isActive" type="Boolean" />
+	</model>
+</model-hints>

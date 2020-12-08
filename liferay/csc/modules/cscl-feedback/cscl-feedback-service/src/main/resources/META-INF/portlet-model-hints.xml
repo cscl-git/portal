@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cscl.feedback.model.Feedback">
+		<field name="uuid" type="String" />
+		<field name="feedbackId" type="long" />
+		<field name="createdById" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="name" type="String">
+			<hint name="max-length">75</hint>
+			<validator name="required" />
+		</field>
+		<field name="email" type="String">
+			<hint name="max-length">75</hint>
+			<validator name="required" />
+		</field>
+		<field name="mobile" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="comments" type="String">
+			<hint name="display-width">350</hint>
+			<hint-collection name="TEXTAREA" />
+			<hint name="max-length">500</hint>
+			<validator name="required" />
+		</field>
+	</model>
+</model-hints>

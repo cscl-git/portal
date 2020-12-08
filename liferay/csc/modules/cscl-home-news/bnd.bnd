@@ -1,0 +1,4 @@
+Bundle-Name: cscl-home-news
+Bundle-SymbolicName: com.cscl.home.news
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.home.news.constants

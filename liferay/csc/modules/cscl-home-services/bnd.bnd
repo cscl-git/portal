@@ -1,0 +1,4 @@
+Bundle-Name: cscl-home-services
+Bundle-SymbolicName: com.cscl.home.services
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.home.services.constants

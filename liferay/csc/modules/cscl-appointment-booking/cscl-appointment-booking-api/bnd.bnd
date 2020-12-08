@@ -1,0 +1,10 @@
+Bundle-Name: cscl-appointment-booking-api
+Bundle-SymbolicName: cscl.appointment.booking.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	cscl.appointment.booking.exception,\
+	cscl.appointment.booking.model,\
+	cscl.appointment.booking.service,\
+	cscl.appointment.booking.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-appointment-booking-service/service.xml

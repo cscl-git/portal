@@ -1,0 +1,6 @@
+Bundle-Name: cscl-online-rti-payment-admin
+Bundle-SymbolicName: com.cscl.online.rti.payment.admin
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.online.rti.payment.admin.constants
+
+Conditional-Package:org.apache.commons.beanutils.*

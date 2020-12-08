@@ -1,0 +1,1 @@
+create index IX_6EA53763 on cscl_feedback (uuid_[$COLUMN_LENGTH:75$]);

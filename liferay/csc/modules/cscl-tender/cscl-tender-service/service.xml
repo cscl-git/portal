@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder auto-import-default-references="false" auto-namespace-tables="false" dependency-injector="ds" package-path="com.cscl.tender">
+	<namespace>CsclTender</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="CsclTender" remote-service="true" uuid="true" table="cscl_tender">
+
+		<!-- PK fields -->
+
+		<column name="tenderId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="createdById" type="long" />
+		<column name="updatedById" type="long" />
+		<column name="userName" type="String"/>
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String" localized="true"/>
+		<column name="description" type="String" localized="true"/>
+		<column name="tenderCategoryId" type="long" />
+		<column name="publishDate" type="Date" />		
+		<column name="lastApplyDate" type="Date" />
+		<column name="tenderOpeningDate" type="Date" />
+		<column name="status" type="int" />
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="publishDate" />
+			<order-column name="createDate" />
+		</order>
+		
+		<!-- Finder methods -->
+		
+		<finder name="status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="User" package-path="com.liferay.portal" />
+		<reference entity="CsclTenderCategory" package-path="com.cscl.tender" />
+	</entity>
+	
+	<entity local-service="true" name="CsclTenderCategory" remote-service="true" trash-enabled="true" table="cscl_tender_category">
+
+		<!-- PK fields -->
+
+		<column name="tenderCatId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="createdById" type="long" />
+		<column name="createDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="category" type="String" localized="true" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="category" />
+		</order>
+
+		<!-- References -->
+
+		<reference entity="User" package-path="com.liferay.portal" />
+	</entity>
+</service-builder>

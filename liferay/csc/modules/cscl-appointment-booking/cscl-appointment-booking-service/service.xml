@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder auto-import-default-references="false" auto-namespace-tables="false" dependency-injector="ds" package-path="cscl.appointment.booking">
+	<author>@rnab</author>
+	<namespace>CsclAppointmentBooking</namespace>
+	
+	<entity local-service="true" name="CsclAppointeeMaster" remote-service="false" table="cscl_appointee_master">
+		<!-- PK fields -->
+		<column name="id_" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="designation" type="String" />
+		<column name="isActive" type="Boolean" />
+
+		<finder name="isActive" return-type="Collection">
+			<finder-column name="isActive" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="CsclApproverMaster" remote-service="false" table="cscl_approver_master">
+		<!-- PK fields -->
+		<column name="id_" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="appointee" type="String" />
+		<column name="userId" type="long" />
+		<column name="isActive" type="Boolean" />
+
+		<finder name="isActive" return-type="Collection">
+			<finder-column name="isActive" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="CsclStatus" remote-service="false" table="cscl_status">
+		<!-- PK fields -->
+		<column name="id_" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="value" type="String" />
+		<column name="isActive" type="Boolean" />
+
+		<finder name="isActive" return-type="Collection">
+			<finder-column name="isActive" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="CsclAppointmentMaster" remote-service="false" table="cscl_appointment_master">
+		<!-- PK fields -->
+		<column name="id_" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="email" type="String" />
+		<column name="mobile" type="String" />
+		<column name="address" type="String" />
+		<column name="appointee" type="int" />
+		<column name="preferedDate" type="Date"/>
+		<column name="preferedTime" type="String"/>
+		<column name="reason" type="String" />
+		<column name="refId" type="String" />
+		<column name="approver" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="status" type="int" />
+		<column name="appointedDate" type="Date"/>
+		<column name="appointedTime" type="String"/>
+		<column name="comment" type="String"/>
+		
+		<finder name="approver" return-type="Collection">
+			<finder-column name="approver" />
+		</finder>
+		<finder name="appointee" return-type="Collection">
+			<finder-column name="appointee" />
+		</finder>
+		
+		<finder name="appointeeAndStatus" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="appointee" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="CsclApproverMapping" remote-service="false" table="cscl_approver_mapping">
+		<!-- PK fields -->
+		<column name="id_" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="appointee" type="int" />
+		<column name="approver" type="String" />
+		<!-- <column name="status" type="int" /> -->
+		<column name="assignedTo" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<finder name="assignedTo" return-type="Collection">
+			<finder-column name="assignedTo" />
+		</finder>
+		<finder name="appointeeId" return-type="Collection">
+			<finder-column name="appointee" />
+		</finder>
+	</entity>
+</service-builder>

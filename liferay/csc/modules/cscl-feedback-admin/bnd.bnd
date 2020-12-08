@@ -1,0 +1,6 @@
+Bundle-Name: cscl-feedback-admin
+Bundle-SymbolicName: com.cscl.feedback.admin
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.feedback.admin.constants
+
+Conditional-Package:org.apache.commons.beanutils.*

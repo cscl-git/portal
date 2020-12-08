@@ -1,0 +1,20 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
+	compileOnly group: "javax.portlet", name: "portlet-api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api"
+	compileOnly group: "jstl", name: "jstl"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	compileOnly group: "com.liferay", name: "com.liferay.petra.string",version: '2.0.0'
+    compileOnly project(":modules:cscl-feedback:cscl-feedback-api")
+}
+
+repositories {
+   flatDir {
+       dirs 'lib'
+   }
+}
+
+dependencies {
+   implementation files('/src/main/resources/META-INF/resources/lib/commons-beanutils-1.9.4.jar')
+}

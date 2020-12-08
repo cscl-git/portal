@@ -1,0 +1,26 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
+	compileOnly group: "javax.portlet", name: "portlet-api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api"
+	compileOnly group: "jstl", name: "jstl"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	compileOnly group: 'com.liferay', name: 'com.liferay.frontend.taglib.clay', version: '2.2.19'
+	compileOnly group: "com.liferay", name: "com.liferay.petra.string",version: '2.0.0'
+	compile group: 'com.liferay', name: 'com.liferay.petra.function', version: '2.1.0'
+	compileOnly group: "com.liferay", name: "com.liferay.upload.api"
+	compile group: "com.liferay", name: "com.liferay.document.library.api",version: '5.1.6'
+    compile group: "com.liferay", name: "com.liferay.document.library.service", version: '4.0.13'
+    compile group: 'com.liferay', name: 'com.liferay.trash.api', version: '2.0.3'
+    compileOnly project(":modules:cscl-tender:cscl-tender-api")
+}
+
+repositories {
+   flatDir {
+       dirs 'lib'
+   }
+}
+
+dependencies {
+   implementation files('/src/main/resources/META-INF/resources/lib/commons-beanutils-1.9.4.jar')
+}

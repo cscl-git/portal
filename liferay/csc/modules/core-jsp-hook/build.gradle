@@ -1,0 +1,6 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.impl", version: '4.13.0'
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: '4.37.0'
+	compileOnly group: "org.osgi", name: "org.osgi.core"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+}

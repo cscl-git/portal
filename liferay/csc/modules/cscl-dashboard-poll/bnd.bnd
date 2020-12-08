@@ -1,0 +1,4 @@
+Bundle-Name: cscl-dashboard-poll
+Bundle-SymbolicName: com.cscl.dashboard.poll
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.dashboard.poll.constants

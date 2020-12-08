@@ -1,0 +1,10 @@
+Bundle-Name: cscl-poll-api
+Bundle-SymbolicName: com.cscl.polls.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cscl.polls.exception,\
+	com.cscl.polls.model,\
+	com.cscl.polls.service,\
+	com.cscl.polls.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-poll-service/service.xml

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cscl.tender.model.CsclTender">
+		<field name="uuid" type="String" />
+		<field name="tenderId" type="long" />
+		<field name="createdById" type="long" />
+		<field name="updatedById" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field localized="true" name="title" type="String">
+			<hint name="max-length">150</hint>
+			<sanitize content-type="text/plain" modes="ALL" />
+			<validator name="required" />
+		</field>
+		<field localized="true" name="description" type="String">
+			<hint-collection name="EDITOR" />
+			<sanitize content-type="text/plain" modes="ALL" />
+			<validator name="required" />
+		</field>
+		<field name="tenderCategoryId" type="long" />
+		<field name="publishDate" type="Date">
+			<hint name="year-range-past">false</hint>
+		</field>
+		<field name="lastApplyDate" type="Date">
+			<hint name="year-range-past">false</hint>
+		</field>
+		<field name="tenderOpeningDate" type="Date">
+			<hint name="year-range-past">false</hint>
+		</field>
+		<field name="status" type="int" />
+	</model>
+	<model name="com.cscl.tender.model.CsclTenderCategory">
+		<field name="tenderCatId" type="long" />
+		<field name="createdById" type="long" />
+		<field name="createDate" type="Date" />
+		<field localized="true" name="category" type="String">
+			<hint name="max-length">150</hint>
+			<sanitize content-type="text/plain" modes="ALL" />
+			<validator name="required" />
+		</field>
+	</model>
+</model-hints>

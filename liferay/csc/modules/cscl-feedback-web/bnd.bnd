@@ -1,0 +1,4 @@
+Bundle-Name: cscl-feedback-web
+Bundle-SymbolicName: com.cscl.feedback
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.feedback.constants

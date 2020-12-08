@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder auto-import-default-references="false" auto-namespace-tables="false" dependency-injector="ds" package-path="com.cscl.feedback">
+	<namespace>Feedback</namespace>
+	<entity local-service="true" name="Feedback" remote-service="true" uuid="true" table="cscl_feedback">
+
+		<!-- PK fields -->
+
+		<column name="feedbackId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="createdById" type="long" />
+		<column name="createDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String"/>
+		<column name="email" type="String"/>
+		<column name="mobile" type="String"/>
+		<column name="comments" type="String"/>
+		
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- References -->
+
+		<reference entity="User" package-path="com.liferay.portal" />
+	</entity>
+</service-builder>

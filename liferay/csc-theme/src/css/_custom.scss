@@ -1,0 +1,61 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+
+@import 'liferay-font-awesome/scss/font-awesome';
+@import 'liferay-font-awesome/scss/glyphicons';
+
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+.portlet-journal .article-content-content .lfr-ddm-field-group,
+ .portlet-journal .edit-article-form .edit-article-sidebar .article-content-description .lfr-ddm-field-group{
+	padding: 0px 24px;
+}
+
+.portlet > .portlet-topper{
+	right:auto;
+}
+
+.main-body-container>.columns-1>.portlet-layout.row {
+    margin: 0;
+}
+
+.main-body-container>.columns-1>.portlet-layout.row>div#column-1 {
+    padding: 0;
+}
+
+.main-body-container .portlet, .menu-banner .portlet, 
+.footer-area .portlet, .top-bar .language-bar .portlet{
+    margin-bottom: 0;
+    .portlet-header{
+        margin-bottom: 0;
+    }
+    .portlet-content-editable{
+        border: none;
+    }    
+}
+
+@media (min-width:1200px) {
+	.container {
+		max-width: 1140px
+	}
+}
+
+.portlet-journal .article-content-content .lfr-ddm-container .form-group{
+	margin-bottom: 0px;
+}
+.portlet-journal .article-content-content .lfr-ddm-field-group{
+	padding:0px;
+}
+.portlet-boundary_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_ .portlet-title-text,
+.portlet-boundary_com_cscl_search_SearchPortlet_ .portlet-title-text{
+	color: rgba(3, 130,193 , 1);
+	padding-bottom: 8px;
+    border-bottom: 2px solid rgba(249,219,7,1);
+}
+.portlet-boundary_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_ .taglib-empty-result-message-header,
+.portlet-boundary_com_cscl_search_SearchPortlet_ .taglib-empty-result-message-header{
+	display: none;
+}

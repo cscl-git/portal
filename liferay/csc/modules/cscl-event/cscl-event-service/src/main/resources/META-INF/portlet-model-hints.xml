@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cscl.event.model.CsclEvent">
+		<field name="uuid" type="String" />
+		<field name="eventId" type="long" />
+		<field name="createdById" type="long" />
+		<field name="updatedById" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field localized="true" name="title" type="String" />
+		<field localized="true" name="description" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+</model-hints>

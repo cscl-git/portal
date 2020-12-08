@@ -1,0 +1,4 @@
+Bundle-Name: com.cscl.blogs.web.hook
+Bundle-SymbolicName: com.cscl.blogs.web.hook
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.blogs.web;bundle-version="4.0.16"

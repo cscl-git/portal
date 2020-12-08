@@ -1,0 +1,12 @@
+Bundle-Name: cscl-online-rti-payment-web
+Bundle-SymbolicName: com.cscl.online.rti.payment.web
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.online.rti.payment.web.constants
+
+Import-Package: !com.ibm.uvm.tools,\
+				!com.sun.jdmk.comm,\
+				!javax.jmdns,\*
+-includeresource:\
+    lib/httpcore.jar=httpcore-*.jar,\
+    lib/httpclient.jar=httpclient-*.jar,\
+    lib/avalon-framework-api.jar=avalon-framework-api-*.jar,\

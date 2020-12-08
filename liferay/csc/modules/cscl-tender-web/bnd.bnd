@@ -1,0 +1,6 @@
+Bundle-Name: cscl-tender-web
+Bundle-SymbolicName: com.cscl.tender
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.tender.constants
+
+Conditional-Package:org.apache.commons.beanutils.*

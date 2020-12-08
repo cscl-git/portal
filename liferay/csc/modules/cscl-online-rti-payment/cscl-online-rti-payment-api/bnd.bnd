@@ -1,0 +1,10 @@
+Bundle-Name: cscl-online-rti-payment-api
+Bundle-SymbolicName: com.cscl.online.rti.payment.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cscl.online.rti.payment.exception,\
+	com.cscl.online.rti.payment.model,\
+	com.cscl.online.rti.payment.service,\
+	com.cscl.online.rti.payment.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-online-rti-payment-service/service.xml

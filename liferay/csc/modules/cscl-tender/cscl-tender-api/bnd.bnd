@@ -1,0 +1,10 @@
+Bundle-Name: cscl-tender-api
+Bundle-SymbolicName: com.cscl.tender.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cscl.tender.exception,\
+	com.cscl.tender.model,\
+	com.cscl.tender.service,\
+	com.cscl.tender.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-tender-service/service.xml

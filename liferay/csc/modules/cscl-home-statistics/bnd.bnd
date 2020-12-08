@@ -1,0 +1,4 @@
+Bundle-Name: cscl-home-statistics
+Bundle-SymbolicName: com.cscl.statistics.home
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.statistics.home.constants

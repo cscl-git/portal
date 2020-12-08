@@ -1,0 +1,10 @@
+Bundle-Name: cscl-event-api
+Bundle-SymbolicName: com.cscl.event.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cscl.event.exception,\
+	com.cscl.event.model,\
+	com.cscl.event.service,\
+	com.cscl.event.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-event-service/service.xml

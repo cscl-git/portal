@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder auto-import-default-references="false" auto-namespace-tables="false" dependency-injector="ds" package-path="com.cscl.online.rti.payment">
+	<author>@rnab</author>
+	<namespace>CsclRtiPayment</namespace>
+	
+	<entity local-service="true" name="CsclRtiPaymentDetails" remote-service="false" table="cscl_rti_payment">
+		<!-- PK fields -->
+		<column name="id" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="applicantName" type="String" />
+		<column name="applicantEmail" type="String" />
+		<column name="applicantMobile" type="String" />
+		<column name="address" type="String" />
+		<column name="rtiSubject" type="String" />
+		<column name="rtiFeeAmount" type="int" />
+		<column name="createdDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="refId" type="String" />
+	</entity>
+</service-builder>

@@ -1,0 +1,4 @@
+Bundle-Name: cscl-search-web
+Bundle-SymbolicName: com.cscl.search
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.search.constants

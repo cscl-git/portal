@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cscl.polls.model.CsclAgeFilter">
+		<field name="id_" type="long" />
+		<field name="name" type="String" />
+		<field name="value" type="String" />
+		<field name="isActive" type="Boolean" />
+	</model>
+	<model name="com.cscl.polls.model.CsclLocalityMaster">
+		<field name="localityId" type="long" />
+		<field name="name" type="String" />
+		<field name="isActive" type="Boolean" />
+	</model>
+	<model name="com.cscl.polls.model.CsclPollsChoice">
+		<field name="choiceId" type="long" />
+		<field name="questionId" type="long" />
+		<field name="name" type="String" />
+		<field localized="true" name="description" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="lastPublishDate" type="Date" />
+	</model>
+	<model name="com.cscl.polls.model.CsclPollsMaster">
+		<field name="entryId" type="long" />
+		<field name="voteId" type="long" />
+		<field name="questionId" type="long" />
+		<field name="choiceId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="email" type="String">
+			<hint name="max-length">75</hint>
+		</field>
+		<field name="mobile" type="String">
+			<hint name="max-length">10</hint>
+		</field>
+		<field name="birthDate" type="Date">
+			<hint name="year-range-past">true</hint>
+			<hint name="year-range-future">false</hint>
+			<hint name="show-time">false</hint>
+			<validator name="required" />
+		</field>
+		<field name="sex" type="String">
+			<validator name="required" />
+		</field>
+		<field name="locality" type="int">
+			<validator name="required" />
+		</field>
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.cscl.polls.model.CsclPollsQuestion">
+		<field name="questionId" type="long" />
+		<field localized="true" name="title" type="String">
+			<hint name="max-length">150</hint>
+			<sanitize content-type="text/plain" modes="ALL" />
+			<validator name="required" />
+		</field>
+		<field localized="true" name="question" type="String">
+			<hint name="max-length">500</hint>
+			<sanitize content-type="text/plain" modes="ALL" />
+			<validator name="required" />
+		</field>
+		<field localized="true" name="description" type="String">
+			<hint name="display-width">350</hint>
+			<hint-collection name="TEXTAREA" />
+			<validator name="required" />
+		</field>
+		<field name="expirationDate" type="Date">
+			<hint name="default-month-delta">1</hint>
+		</field>
+		<field name="lastPublishDate" type="Date" />
+		<field name="lastVoteDate" type="Date" />
+	</model>
+</model-hints>

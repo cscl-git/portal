@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
+
+<service-builder auto-import-default-references="false" auto-namespace-tables="false" dependency-injector="ds" package-path="com.cscl.polls">
+	<namespace>CsclPolls</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	
+	<entity local-service="true" name="CsclPollsChoice" remote-service="false" table="cscl_polls_choice">
+
+		<!-- PK fields -->
+
+		<column name="choiceId" primary="true" type="long" />
+
+		<!-- Other fields -->
+
+		<column name="questionId" type="long" />
+		<column name="name" type="String" />
+		<column localized="true" name="description" type="String" />
+		<column name="lastPublishDate" type="Date" />
+
+		<!-- References -->
+
+		<reference entity="CsclPollsQuestion" package-path="com.cscl.polls" />
+	</entity>
+	
+	<entity local-service="false" name="CsclPollsQuestion" remote-service="false" table="cscl_polls_question">
+
+		<!-- PK fields -->
+
+		<column name="questionId" primary="true" type="long" />
+
+		<!-- Other fields -->
+
+		<column localized="true" name="title" type="String" />
+		<column localized="true" name="question" type="String" />
+		<column localized="true" name="description" type="String" />
+		<column name="expirationDate" type="Date" />
+		<column name="lastPublishDate" type="Date" />
+		<column name="lastVoteDate" type="Date" />
+
+		<!-- References -->
+
+		<reference entity="CsclPollsChoice" package-path="com.cscl.polls" />
+	</entity>
+	<entity local-service="true" name="CsclLocalityMaster" remote-service="false" table="cscl_locality_master">
+		<!-- PK fields -->
+		<column name="localityId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="isActive" type="Boolean" />
+
+		<finder name="isActive" return-type="Collection">
+			<finder-column name="isActive" />
+		</finder>
+	</entity>
+	<entity local-service="true" name="CsclAgeFilter" remote-service="false" table="cscl_age_filter">
+		<!-- PK fields -->
+		<column name="id_" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="value" type="String" />
+		<column name="isActive" type="Boolean" />
+
+		<finder name="isActive" return-type="Collection">
+			<finder-column name="isActive" />
+		</finder>
+	</entity>
+	<entity local-service="true" name="CsclPollsMaster" remote-service="false" table="cscl_polls_master">
+		<!-- PK fields -->
+		<column name="entryId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="voteId" type="long" />
+		<column name="questionId" type="long" />
+		<column name="choiceId" type="long" />
+		<column name="name" type="String" />
+		<column name="email" type="String" />
+		<column name="mobile" type="String" />
+		<column name="birthDate" type="Date" />
+		<column name="sex" type="String" />
+		<column name="locality" type="int" />
+		<column name="createdDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Finder Methods -->
+		<finder name="pollId" return-type="Collection">
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="sex" return-type="Collection">
+			<finder-column name="sex" />
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="locality" return-type="Collection">
+			<finder-column name="locality" />
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="age" return-type="Collection">
+			<finder-column name="birthDate" />
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="ageAndSex" return-type="Collection">
+			<finder-column name="birthDate" />
+			<finder-column name="sex" />
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="ageAndLocality" return-type="Collection">
+			<finder-column name="birthDate" />
+			<finder-column name="locality" />
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="sexAndLocality" return-type="Collection">
+			<finder-column name="sex" />
+			<finder-column name="locality" />		
+			<finder-column name="questionId" />
+		</finder>
+		<finder name="ageAndSexAndLocality" return-type="Collection">
+			<finder-column name="birthDate" />
+			<finder-column name="sex" />
+			<finder-column name="locality" />
+			<finder-column name="questionId" />
+		</finder>
+	</entity>
+</service-builder>

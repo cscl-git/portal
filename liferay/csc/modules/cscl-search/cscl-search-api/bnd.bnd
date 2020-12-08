@@ -1,0 +1,10 @@
+Bundle-Name: cscl-search-api
+Bundle-SymbolicName: com.cscl.search.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cscl.search.exception,\
+	com.cscl.search.model,\
+	com.cscl.search.service,\
+	com.cscl.search.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-search-service/service.xml

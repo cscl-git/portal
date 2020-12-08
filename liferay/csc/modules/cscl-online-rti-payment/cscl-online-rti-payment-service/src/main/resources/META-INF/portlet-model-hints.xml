@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.cscl.online.rti.payment.model.CsclRtiPaymentDetails">
+		<field name="id" type="long" />
+		<field name="applicantName" type="String" />
+		<field name="applicantEmail" type="String" />
+		<field name="applicantMobile" type="String" />
+		<field name="address" type="String" />
+		<field name="rtiSubject" type="String" />
+		<field name="rtiFeeAmount" type="int" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="refId" type="String" />
+	</model>
+</model-hints>

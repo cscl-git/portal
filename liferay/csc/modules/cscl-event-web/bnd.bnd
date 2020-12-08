@@ -1,0 +1,4 @@
+Bundle-Name: cscl-event-web
+Bundle-SymbolicName: com.cscl.event
+Bundle-Version: 1.0.0
+Export-Package: com.cscl.event.constants

@@ -1,0 +1,10 @@
+Bundle-Name: cscl-feedback-api
+Bundle-SymbolicName: com.cscl.feedback.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.cscl.feedback.exception,\
+	com.cscl.feedback.model,\
+	com.cscl.feedback.service,\
+	com.cscl.feedback.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../cscl-feedback-service/service.xml

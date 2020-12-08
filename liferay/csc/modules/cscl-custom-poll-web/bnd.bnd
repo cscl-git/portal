@@ -1,0 +1,4 @@
+Bundle-Name: cscl-custom-poll-web
+Bundle-SymbolicName: cscl.custom.poll.web
+Bundle-Version: 1.0.0
+Export-Package: cscl.custom.poll.web.constants
